@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var settings: Settings
     @Binding var isShowingSettings: Bool
-    @State private var isHoveredClose = false
+    @State private var isHoveredBack = false
     @State private var isHoveredURL = false
     @Environment(\.openURL) var openURL
     
@@ -38,9 +38,8 @@ struct SettingsView: View {
             )
             dropdownButton(
                 action: { isShowingSettings = false },
-                shortcutKey: ",",
-                isHovered: $isHoveredClose,
-                label: "Close"
+                isHovered: $isHoveredBack,
+                label: "Back"
             )
         }
         .frame(width: 250)
