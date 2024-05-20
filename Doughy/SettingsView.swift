@@ -29,7 +29,7 @@ struct SettingsView: View {
             Divider()
             dropdownButton(
                 action: {
-                    if let url = URL(string: "https://www.duckduckgo.com") {
+                    if let url = URL(string: "https://github.com/jasperalbers/Doughy") {
                         openURL(url)
                     }
                 },
