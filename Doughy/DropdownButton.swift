@@ -22,22 +22,25 @@ struct dropdownButton: View {
 
     var body: some View {
         Button(action: action) {
-            HStack {
-                Text(label)
-                Spacer()
-                if let shortcutKey = shortcutKey {
-                    Text("⌘\(shortcutKey)")
-                        .foregroundStyle(.tertiary)
+            ZStack {
+                if isHovered {
+                    RoundedRectangle(cornerRadius: 5)
+                        .foregroundStyle(Color.accentColor)
+                        .padding(.leading, -8) // Adjust padding to make the rectangle larger
+                        .padding(.trailing, -8) // Adjust padding to make the rectangle larger
+                        .padding(.top, -4) // Adjust padding to make the rectangle larger
+                        .padding(.bottom, -4) // Adjust padding to make the rectangle larger
                 }
-            }
-            .background(Color(.clear))
-            .overlay {
-                RoundedRectangle(cornerRadius: 5)
-                    .foregroundStyle(isHovered ? Color.gray.opacity(0.3) : Color.clear)
-                    .padding(.leading, -8) // Adjust padding to make the rectangle larger
-                    .padding(.trailing, -8) // Adjust padding to make the rectangle larger
-                    .padding(.top, -4) // Adjust padding to make the rectangle larger
-                    .padding(.bottom, -4) // Adjust padding to make the rectangle larger
+                
+                HStack {
+                    Text(label)
+                    Spacer()
+                    if let shortcutKey = shortcutKey {
+                        Text("⌘\(shortcutKey)")
+                            .foregroundStyle(.tertiary)
+                        
+                    }
+                }
             }
             .onHover { hovering in
                 isHovered = hovering
