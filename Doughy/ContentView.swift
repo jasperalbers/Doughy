@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var batteryInfo: BatteryInfo
+    @Binding var isShowingSettings: Bool
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if isShowingSettings {
+                SettingsView(isShowingSettings: $isShowingSettings)
+            } else {
+                BatteryView(batteryInfo: batteryInfo, isShowingSettings: $isShowingSettings)
+            }
         }
-        .padding()
     }
-}
-
-#Preview {
-    ContentView()
 }

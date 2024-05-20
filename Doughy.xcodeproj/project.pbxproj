@@ -11,6 +11,10 @@
 		A48B63DB2BFAC1B300CA413C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B63DA2BFAC1B300CA413C /* ContentView.swift */; };
 		A48B63DD2BFAC1B400CA413C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48B63DC2BFAC1B400CA413C /* Assets.xcassets */; };
 		A48B63E02BFAC1B400CA413C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48B63DF2BFAC1B400CA413C /* Preview Assets.xcassets */; };
+		A48B63EC2BFBBA1C00CA413C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B63EB2BFBBA1C00CA413C /* SettingsView.swift */; };
+		A48B63EE2BFBBA5D00CA413C /* BatteryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B63ED2BFBBA5D00CA413C /* BatteryInfo.swift */; };
+		A48B63F02BFBBCEB00CA413C /* DropdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B63EF2BFBBCEB00CA413C /* DropdownButton.swift */; };
+		A48B63F22BFBC25E00CA413C /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B63F12BFBC25E00CA413C /* BatteryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		A48B63DC2BFAC1B400CA413C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A48B63DF2BFAC1B400CA413C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A48B63E12BFAC1B400CA413C /* Doughy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Doughy.entitlements; sourceTree = "<group>"; };
+		A48B63EB2BFBBA1C00CA413C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A48B63ED2BFBBA5D00CA413C /* BatteryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryInfo.swift; sourceTree = "<group>"; };
+		A48B63EF2BFBBCEB00CA413C /* DropdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownButton.swift; sourceTree = "<group>"; };
+		A48B63F12BFBC25E00CA413C /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 			children = (
 				A48B63D82BFAC1B300CA413C /* DoughyApp.swift */,
 				A48B63DA2BFAC1B300CA413C /* ContentView.swift */,
+				A48B63F12BFBC25E00CA413C /* BatteryView.swift */,
+				A48B63EB2BFBBA1C00CA413C /* SettingsView.swift */,
+				A48B63EF2BFBBCEB00CA413C /* DropdownButton.swift */,
+				A48B63ED2BFBBA5D00CA413C /* BatteryInfo.swift */,
 				A48B63DC2BFAC1B400CA413C /* Assets.xcassets */,
 				A48B63E12BFAC1B400CA413C /* Doughy.entitlements */,
 				A48B63DE2BFAC1B400CA413C /* Preview Content */,
@@ -139,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A48B63EC2BFBBA1C00CA413C /* SettingsView.swift in Sources */,
+				A48B63F22BFBC25E00CA413C /* BatteryView.swift in Sources */,
 				A48B63DB2BFAC1B300CA413C /* ContentView.swift in Sources */,
 				A48B63D92BFAC1B300CA413C /* DoughyApp.swift in Sources */,
+				A48B63F02BFBBCEB00CA413C /* DropdownButton.swift in Sources */,
+				A48B63EE2BFBBA5D00CA413C /* BatteryInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +295,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +323,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
