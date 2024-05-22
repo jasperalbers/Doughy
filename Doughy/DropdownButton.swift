@@ -33,12 +33,21 @@ struct dropdownButton: View {
                 }
                 
                 HStack {
-                    Text(label)
-                    Spacer()
-                    if let shortcutKey = shortcutKey {
-                        Text("⌘\(shortcutKey)")
-                            .foregroundStyle(.tertiary)
-                        
+                    if isHovered {
+                        Text(label)
+                            .foregroundStyle(.white)
+                        Spacer()
+                        if let shortcutKey = shortcutKey {
+                            Text("⌘\(shortcutKey)")
+                                .foregroundStyle(.white)
+                        }
+                    } else {
+                        Text(label)
+                        Spacer()
+                        if let shortcutKey = shortcutKey {
+                            Text("⌘\(shortcutKey)")
+                                .foregroundStyle(.tertiary)
+                        }
                     }
                 }
             }
