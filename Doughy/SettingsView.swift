@@ -14,6 +14,8 @@ struct SettingsView: View {
     @State private var isHoveredURL = false
     @Environment(\.openURL) var openURL
     
+    let colors: [Color] = [.pink, .purple, .blue, .teal, .mint, .green, .yellow, .orange, .red, .white]
+    
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -24,6 +26,12 @@ struct SettingsView: View {
             
             VStack(alignment: .leading) {
                 Toggle("Show Battery Bar", isOn: $settings.showBatteryBar)
+                
+                Picker("Battery Bar Color", selection: $settings.selectedColor) {
+                    ForEach(colors, id: \.self) { color in
+                        Text(color.description.capitalized).tag(color)
+                    }
+                }
             }
 
             Divider()
@@ -52,5 +60,6 @@ struct SettingsView: View {
 
 class Settings: ObservableObject {
     @Published var showBatteryBar: Bool = false
+    @Published var selectedColor: Color = .blue
 
 }

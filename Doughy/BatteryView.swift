@@ -35,7 +35,7 @@ struct BatteryView: View {
                     
                     RoundedRectangle(cornerRadius: 30)
                         .frame(width: 250 * Double(batteryInfo.percentage) / 100, height: 10)
-                        .foregroundStyle(.green)
+                        .foregroundStyle(settings.selectedColor)
                     
                 }
             }
