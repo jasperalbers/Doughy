@@ -48,10 +48,15 @@ struct BatteryView: View {
                     
                     //            Divider()
                     
-                    
-                    Text("Time Remaining: \(batteryInfo.timeRemaining)")
-                        .font(.system(size: 12))
-                        .foregroundStyle(.secondary)
+                    if batteryInfo.timeRemaining == "0 minutes" {
+                        Text("Fully Charged")
+                            .font(.system(size: 12))
+                            .foregroundStyle(.secondary)
+                    } else {
+                        Text("Time Remaining: \(batteryInfo.timeRemaining)")
+                            .font(.system(size: 12))
+                            .foregroundStyle(.secondary)
+                    }
                 }
             
 
